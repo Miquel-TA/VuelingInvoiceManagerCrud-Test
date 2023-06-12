@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="0d28f310-614b-4a60-8aa3-431bb5abdeb3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/Vueling.Api.WCF/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="51abf0e9-da28-4626-81b4-90db48cd4f75" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Vueling.Api.WCF/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="469bd03f-1ca9-4b20-bdbc-406f90127f47" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Vueling.Api.WCF/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7e33280c-9196-4865-950d-3e7bd1e073b3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Vueling.Api.WCF/Service1/mex" />
+    <MetadataFile FileName="Vueling.Crosscutting.Models.xsd" MetadataType="Schema" ID="ee26ca07-16c4-4f5d-9469-1e8f2c7ffc77" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Vueling.Api.WCF/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
