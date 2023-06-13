@@ -39,10 +39,14 @@ namespace VuelingInvoiceManagerCrud_Test
 
         static void Main(string[] args)
         {
+            for (int i = 0; i < 100; i++)
+            {
+                RemoveInvoiceTest(i);
+            }
 
             int addedInvoiceID = AddInvoiceTest(newInvoice);
-
-            Console.WriteLine("Added invoice:");
+            Console.WriteLine("Added invoice " + addedInvoiceID + ":");
+            Console.WriteLine("Listing all:");
 
             List<WCFService.Invoice>invoices = GetAllInvoicesTest();
             foreach (WCFService.Invoice invoice in invoices)
@@ -52,12 +56,9 @@ namespace VuelingInvoiceManagerCrud_Test
 
             bool result = RemoveInvoiceTest(addedInvoiceID);
 
-            Console.WriteLine("Deleted invoice " + addedInvoiceID + ":");
-
-            invoices = GetAllInvoicesTest();
-            foreach (WCFService.Invoice invoice in invoices)
+            if (result)
             {
-                Console.WriteLine(ToString(invoice));
+                Console.WriteLine("Database delete order returned true for Invoice " + addedInvoiceID + ".");
             }
             Console.ReadLine();
         }
@@ -65,7 +66,7 @@ namespace VuelingInvoiceManagerCrud_Test
         public static string ToString(WCFService.Invoice invoice)
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("\n\n\nInvoice:");
+            sb.AppendLine("\nInvoice:");
             sb.AppendLine($" >ID: {invoice.ID}");
             sb.AppendLine($" >Date: {invoice.Date}");
             sb.AppendLine($" >OrderNumber: {invoice.OrderNumber}");
@@ -92,6 +93,7 @@ namespace VuelingInvoiceManagerCrud_Test
             {
                 sb.AppendLine(" >" + product.ID.ToString());
                 sb.AppendLine(" >" + product.Description.ToString());
+                sb.AppendLine("");
             }
 
             return sb.ToString();
